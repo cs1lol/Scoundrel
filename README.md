@@ -17,5 +17,5 @@ A terminal based game based on the card game Scoundrel.
     + If your weapon cannot defeat a monster on the floor, you will fight the monster barehanded.
 + Fleeing: You may flee a room if it is too challenging, takes 3 turns to recharge.
 
-# Please leave feedback and have fun playing.
+## Please leave feedback and have fun playing.
 Take your time, its a strategy game not an action roguelite.
