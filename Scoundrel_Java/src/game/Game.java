@@ -44,23 +44,22 @@ public class Game {
         }
     }
 
-    public static boolean gameEnd() {
+    public static void gameEnd() {
         if (!player.isAlive()) {
             System.out.println("You died. There were " + Deck.getSize() + " cards left in the dungeon.");
         } else {
             System.out.println("You won. Congratulations!");
         }
-        System.out.println("Would you like to play again? (Y/N)");
-        String userInput = scanner.nextLine();
-        if ("y".equals(userInput.toLowerCase())) {
-            gameStart();
-            return true;
-        } else {
-            scanner.close();
-            return false;
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
         }
     }
     
+    public static void closeScanner() {
+        scanner.close();
+    }
     // Room methods
     private static String displayValidMoves(int[] validMoves) {
         String output = "Your valid moves are: [ ";
