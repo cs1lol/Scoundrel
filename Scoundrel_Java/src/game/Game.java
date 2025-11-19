@@ -44,13 +44,21 @@ public class Game {
         }
     }
 
-    public static void gameEnd() {
+    public static boolean gameEnd() {
         if (!player.isAlive()) {
             System.out.println("You died. There were " + Deck.getSize() + " cards left in the dungeon.");
         } else {
             System.out.println("You won. Congratulations!");
         }
-        scanner.close();
+        System.out.println("Would you like to play again? (Y/N)");
+        String userInput = scanner.nextLine();
+        if ("y".equals(userInput.toLowerCase())) {
+            gameStart();
+            return true;
+        } else {
+            scanner.close();
+            return false;
+        }
     }
     
     // Room methods
